@@ -1,0 +1,39 @@
+<html>
+<head>
+	<link rel="stylesheet" href="raffler.css">
+</head>
+<body>
+	
+	<div id="container">
+		
+	</div>
+
+	<!-- Item-template -->
+	<script type="text/template" id="item-template">
+	<h1>Raffler TDD</h1>
+        <input id="new_entry"  size="60" autofocus> <button id="new">Add</button>
+        <ul id="foo">
+	      <% _.each(entries, function(entry){ %>
+	            <li id='<%- entry.id %>'><%- entry.name %>
+	            	<span class="entry-winner"><% if (entry.winner) { %><span class="winner highlight">WINNER</span><% } %></span>
+	            </li>
+	      <% }); %>
+	    </ul>
+	    <button id="draw">Draw Winner</button>
+
+    </script>
+
+
+    <!--include jQuery, underscore, and backbone -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min.js" type="text/javascript"></script>  	
+  	<script src="http://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.0.0/backbone-min.js" type="text/javascript"></script> 
+  	<script src="backbone.localStorage.js"></script>
+  	
+
+  	<!--App script created by cofeescript -->
+    <script src="src/raffler.js"></script>
+
+
+</body>
+</html>

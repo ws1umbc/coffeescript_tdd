@@ -1,0 +1,5 @@
+<div class="entry">
+  
+<div class="entry-name">
+<a href="#/delete/<%= entry.name %>"><span class="entry-delete">delete</span></a>  <%= entry.name %><% if (entry.winner) { %><span class="entry-winner">WINNER</span><% } %></div>
+</div>
